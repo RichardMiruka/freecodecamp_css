@@ -1,0 +1,161 @@
+/* Global Styles */
+body {
+    background-color: rosybrown;
+    font-family: 'Poppins', Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #2c2c2c;
+    color: #f0f0f0;
+}
+
+/* Toggle Switch */
+.toggle-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-bottom: 20px;
+    gap: 10px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 24px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 24px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:checked+.slider:before {
+    transform: translateX(26px);
+}
+
+/* Business Card */
+.business-card {
+    width: 90%;
+    max-width: 320px;
+    background-color: #f8f8f8;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    padding: 20px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .business-card {
+    background-color: #3a3a3a;
+    border-color: #555;
+}
+
+/* Image */
+.profile-image {
+    max-width: 100%;
+    border-radius: 12px;
+}
+
+/* Paragraph Styling */
+p {
+    margin: 5px 0;
+}
+
+/* Links */
+a {
+    text-decoration: none;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+body.dark-mode a {
+    color: #66ccff;
+}
+
+body.dark-mode a:hover {
+    color: #33aaff;
+}
+
+/* Button-like Link */
+.button {
+    background-color: #007BFF;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-weight: bold;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Social Media */
+.social-media h2 {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+.social-media a {
+    display: block;
+    margin: 4px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .business-card {
+        font-size: 14px;
+        padding: 16px;
+    }
+
+    .toggle-container {
+        justify-content: center;
+    }
+}

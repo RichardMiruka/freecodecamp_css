@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Business Card</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <!-- Dark Mode Toggle -->
+    <div class="toggle-container">
+        <label class="switch">
+            <input type="checkbox" id="darkToggle">
+            <span class="slider round"></span>
+        </label>
+        <span>Dark Mode</span>
+    </div>
+
+    <div class="business-card">
+        <img class="profile-image" src="profile.jpg"
+            alt="image of a flower">
+        <p class="full-name">Richard Miruka</p>
+        <p class="designation">Software Engineer</p>
+        <p class="company">Taawun Trust Organization</p>
+        <hr>
+        <p><a href="mailto:richardmiruka96@gmail.com">richardmiruka96@gmail.com</a></p>
+        <p><a href="tel:+254700129706">Tel: 0700129706</a></p>
+        <a class="button" href="https://t.co/3WbhY80g3K" target="_blank">Portfolio</a>
+        <hr>
+        <div class="social-media">
+            <h2>Connect with me</h2>
+            <a href="https://x.com/richardmiruka96" target="_blank">Twitter</a>
+            <a href="https://www.linkedin.com/in/richard-miruka-05083b147/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/RichardMiruka" target="_blank">GitHub</a>
+        </div>
+    </div>
+
+    <script>
+        const toggle = document.getElementById('darkToggle');
+        toggle.addEventListener('change', () => {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+
+</html>
