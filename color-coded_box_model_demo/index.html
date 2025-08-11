@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CSS Box Model Color Demo</title>
+<style>
+  body {
+    background-color: #ffcccc; /* Margin color */
+    font-family: Arial, sans-serif;
+    padding: 40px;
+  }
+
+  .box {
+    background-color: #ffffcc; /* Content color */
+    padding: 30px;             /* Padding space */
+    border: 10px solid #3333ff;/* Border color */
+    margin: 50px;              /* Margin space */
+    width: 250px;
+    text-align: center;
+  }
+
+  .content {
+    background-color: #ccffcc; /* Inner content area */
+    padding: 10px;
+  }
+
+  /* Add labels for clarity */
+  .label {
+    font-size: 0.9em;
+    font-style: italic;
+    margin-top: 5px;
+    color: #444;
+  }
+</style>
+</head>
+<body>
+
+<h2>CSS Box Model Visualization</h2>
+
+<div class="box">
+  <div class="content">
+    This is the <strong>content</strong>
+  </div>
+  <p class="label">Yellow = Padding | Blue = Border | Pink = Margin | Green = Content</p>
+</div>
+
+</body>
+</html>
