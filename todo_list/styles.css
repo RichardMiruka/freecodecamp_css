@@ -1,95 +1,116 @@
-/* Reset default browser styles */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body styling */
+/* Body styling with soft gradient */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
     color: #333;
     padding: 20px;
     line-height: 1.6;
 }
 
-/* Main checklist container */
+/* Main checklist container with soft background */
 .todo-list {
     list-style-type: none;
-    max-width: 700px;
+    max-width: 750px;
     margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e7eb;
 }
 
-/* Top-level items */
+/* Top-level checklist items */
 .todo-list>li {
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    background: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    transition: background 0.3s ease;
 }
 
-/* Checkbox and label styling */
+.todo-list>li:hover {
+    background: #eef2f7;
+}
+
+/* Checkbox styling */
 .todo-list input[type="checkbox"] {
     margin-right: 8px;
     transform: scale(1.2);
     cursor: pointer;
 }
 
+/* Main section labels */
 .todo-list label {
     font-weight: bold;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    color: #2b6cb0;
     cursor: pointer;
 }
 
-/* Sub-item list */
+/* Sub-items list */
 .sub-item {
     list-style-type: disc;
     margin-left: 28px;
-    margin-top: 5px;
+    margin-top: 8px;
 }
 
-/* Links inside sub-items */
+/* Links with colorful styling */
 .sub-item-link {
     text-decoration: none;
-    color: #0077cc;
+    color: #1d4ed8;
+    /* blue */
     font-size: 1rem;
     display: inline-block;
-    padding: 2px 0;
-    transition: color 0.2s, background-color 0.2s;
+    padding: 3px 6px;
+    border-radius: 5px;
+    background-color: rgba(29, 78, 216, 0.05);
+    transition: all 0.3s ease;
 }
 
-/* Hover, focus, and active states for links */
+/* Hover, focus, active */
 .sub-item-link:hover {
-    color: #005fa3;
-    background-color: #eef6fb;
-    padding: 2px 4px;
-    border-radius: 4px;
+    color: #fff;
+    background-color: #2563eb;
 }
 
 .sub-item-link:focus {
-    outline: 2px solid #ff9800;
+    outline: 2px solid #f59e0b;
     outline-offset: 2px;
 }
 
 .sub-item-link:active {
-    color: #004080;
+    background-color: #1e40af;
+    color: #fff;
 }
 
-/* Visited link color */
+/* Visited link */
 .sub-item-link:visited {
-    color: #800080;
+    color: #6b21a8;
+    /* purple */
 }
 
-/* Responsive design */
+/* Horizontal rule styling */
+hr {
+    border: none;
+    border-top: 1px dashed #cbd5e1;
+    margin: 15px 0;
+}
+
+/* Responsive adjustments */
 @media (max-width: 600px) {
     body {
-        padding: 10px;
+        padding: 12px;
     }
 
     .todo-list {
-        padding: 15px;
+        padding: 18px;
     }
 
     .todo-list label {
