@@ -1,43 +1,76 @@
+/* Reset & base styles */
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    margin: 0;
-    font-family: sans-serif;
+    font-family: system-ui, Arial, sans-serif;
     background: #f5f6f7;
+    color: #1b1b32;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
 }
 
+/* Header */
 .header {
     text-align: center;
     text-transform: uppercase;
-    padding: 32px;
+    padding: clamp(16px, 5vw, 32px);
     background-color: #0a0a23;
     color: #fff;
     border-bottom: 4px solid #fdb347;
 }
 
+/* Gallery layout */
 .gallery {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
     gap: 16px;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 20px 10px;
+    padding: clamp(16px, 4vw, 32px);
+    min-height: 100vh;
 }
 
+/* Gallery images */
 .gallery img {
     width: 100%;
     max-width: 350px;
-    height: 300px;
+    aspect-ratio: 4 / 3;
+    /* modern replacement for fixed height */
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
 }
 
+/* Hover/focus effects */
+.gallery img:hover,
+.gallery img:focus {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+    outline: none;
+}
+
+/* Keeps spacing consistent if last row has fewer images */
 .gallery::after {
     content: "";
-    width: 350px;
+    flex-grow: 1;
+    max-width: 350px;
+}
+
+/* Optional dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1b1b32;
+        color: #f5f6f7;
+    }
+
+    .header {
+        background-color: #111133;
+        border-bottom-color: #fdb347;
+    }
 }
