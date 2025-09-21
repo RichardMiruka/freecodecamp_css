@@ -55,12 +55,7 @@ body {
     outline: none;
 }
 
-/* Keeps spacing consistent if last row has fewer images */
-.gallery::after {
-    content: "";
-    flex-grow: 1;
-    max-width: 350px;
-}
+
 
 /* Optional dark mode */
 @media (prefers-color-scheme: dark) {
