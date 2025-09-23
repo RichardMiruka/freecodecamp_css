@@ -1,0 +1,263 @@
+/* === RESET & BASE STYLES === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* smooth scroll like we discussed */
+}
+
+body {
+    font-family: "Open Sans", Arial, sans-serif;
+    line-height: 1.6;
+    background: #f9fafb;
+    color: #1b1b32;
+    transition: background 0.3s, color 0.3s;
+    -webkit-font-smoothing: antialiased;
+    /* smoother fonts */
+    padding: 20px;
+    animation: fadeInBody 1s ease-in-out;
+}
+
+/* === ANIMATIONS === */
+@keyframes fadeInBody {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0.7;
+    }
+
+    60% {
+        transform: scale(1.05);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* === TYPOGRAPHY === */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-bottom: 10px;
+    font-weight: 700;
+    animation: slideUp 0.8s ease-in-out;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+/* Highlighted text */
+mark {
+    background: #ffeb3b;
+    padding: 2px 4px;
+    border-radius: 4px;
+    animation: bounceIn 0.6s ease-in-out;
+}
+
+/* === LAYOUT === */
+header,
+footer {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    animation: slideUp 0.8s ease-in-out;
+}
+
+header h1 {
+    text-align: center;
+}
+
+/* Navigation */
+nav ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1b1b32;
+    padding: 5px 10px;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+    background: #e0e0e0;
+    transform: scale(1.1);
+}
+
+/* Sections */
+section {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    animation: slideUp 1s ease-in-out;
+}
+
+/* === TABLES === */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 10px 0;
+    animation: slideUp 1s ease-in-out;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+caption {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+/* === FORMS === */
+form {
+    display: grid;
+    gap: 10px;
+    animation: slideUp 1s ease-in-out;
+}
+
+input,
+textarea,
+select,
+button {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: inherit;
+}
+
+button {
+    background: #1b1b32;
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: bounceIn 0.7s ease-in-out;
+}
+
+button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* === MEDIA === */
+img,
+video,
+iframe,
+canvas,
+svg {
+    display: block;
+    margin: 10px 0;
+    max-width: 100%;
+    border-radius: 12px;
+    animation: slideUp 1s ease-in-out;
+}
+
+/* === INTERACTIVE === */
+details {
+    margin: 10px 0;
+    animation: slideUp 1s ease-in-out;
+}
+
+dialog {
+    border: none;
+    border-radius: 12px;
+    padding: 15px;
+    background: #f0f0f0;
+    animation: fadeInBody 0.8s ease-in-out;
+}
+
+/* === BLOCKQUOTE === */
+blockquote {
+    border-left: 4px solid #1b1b32;
+    padding-left: 10px;
+    margin: 10px 0;
+    font-style: italic;
+    color: #555;
+    animation: slideUp 1s ease-in-out;
+}
+
+/* === CARDS / EFFECTS === */
+section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+/* === DARK MODE === */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: #1b1b32;
+        color: #f9fafb;
+    }
+
+    header,
+    footer,
+    section {
+        background: #2c2c54;
+        color: #fff;
+    }
+
+    nav a {
+        color: #fff;
+    }
+
+    nav a:hover {
+        background: #3a3a6a;
+    }
+
+    button {
+        background: #f9fafb;
+        color: #1b1b32;
+    }
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}

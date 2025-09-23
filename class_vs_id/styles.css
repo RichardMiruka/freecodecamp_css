@@ -1,0 +1,46 @@
+/* Global body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f5f6f7;
+    color: #1b1b32;
+    line-height: 1.6;
+}
+
+/* Style for the unique header (ID selector) */
+#main-header {
+    background: #1b1b32;
+    color: white;
+    text-align: center;
+    padding: 30px;
+    border-bottom: 4px solid #f39c12;
+}
+
+/* Container for the cards */
+.card-container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 40px;
+    flex-wrap: wrap;
+    /* Allows wrapping on small screens */
+}
+
+/* Style for reusable cards (class selector) */
+.card {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    /* moves card up by 10px */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    /* deeper shadow when lifted */
+}

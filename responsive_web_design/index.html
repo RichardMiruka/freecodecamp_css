@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Web Design Demo</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <header class="site-header">
+        <h1>Responsive Web Design</h1>
+        <p>Adapting layouts for all devices using Flexbox, Grid & Media Queries</p>
+    </header>
+
+    <main class="grid-container">
+        <article class="card">
+            <h2>What Is Responsive Web Design?</h2>
+            <p>
+                Responsive web design ensures websites adapt to different screen sizes.
+                It relies on <strong>fluid grids</strong>, <strong>flexible images</strong>,
+                and <strong>media queries</strong>. Tools like Flexbox and Grid make this easy.
+            </p>
+        </article>
+
+        <article class="card">
+            <h2>How Do Media Queries Work?</h2>
+            <p>
+                Media queries apply styles conditionally, based on device features such as
+                width, orientation, and resolution.
+            </p>
+            <pre><code>@media screen and (min-width: 768px) {
+  body { font-size: 1.125rem; }
+}</code></pre>
+        </article>
+
+        <article class="card">
+            <h2>What Are Media Breakpoints?</h2>
+            <p>
+                Breakpoints define the widths where layouts adapt. Common modern breakpoints:
+            </p>
+            <ul>
+                <li><strong>≤640px:</strong> Mobile</li>
+                <li><strong>641–1024px:</strong> Tablet</li>
+                <li><strong>≥1025px:</strong> Desktop</li>
+            </ul>
+        </article>
+
+        <article class="card">
+            <h2>Mobile-First Approach</h2>
+            <p>
+                Start designing for mobile, then progressively enhance for larger screens.
+                This ensures core content is always accessible.
+            </p>
+            <pre><code>/* Base mobile styles */
+.container { width: 100%; }
+
+/* Tablet & desktop enhancements */
+@media (min-width: 768px) {
+  .container { width: 750px; }
+}</code></pre>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <p>© 2025 Responsive Web Design Demo</p>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+/* ---------- Base Reset ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, Arial, sans-serif;
+  line-height: 1.6;
+  background: #f9fafb;
+  color: #333;
+  padding: 1rem;
+}
+
+/* ---------- Layout ---------- */
+.site-header, .site-footer {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.site-header h1 {
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* ---------- Cards ---------- */
+.card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.card h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #0055aa;
+}
+
+.card pre {
+  background: #f4f4f4;
+  padding: 0.75rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-top: 0.75rem;
+}
+
+/* ---------- Responsive Breakpoints ---------- */
+
+/* Tablets */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  .grid-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .site-header h1 {
+    font-size: 2.25rem;
+  }
+}
