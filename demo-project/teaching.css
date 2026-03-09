@@ -1,0 +1,9 @@
+
+h1 {
+    color: blue;
+    font-size: 32pt;
+    text-align: center;
+    border: 2px solid-red;
+    margin: 20px;
+    display: flex; 
+}

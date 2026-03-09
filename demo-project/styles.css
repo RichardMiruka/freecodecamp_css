@@ -33,7 +33,7 @@
    This is how you build a consistent design system.
 ────────────────────────────────────────────────────────────── */
 :root {
-    /* Colour Palette */
+    /* Color Palette */
     --clr-cream: #F5EFE0;
     --clr-cream-dark: #EDE2C8;
     --clr-warm-white: #FAF7F2;
