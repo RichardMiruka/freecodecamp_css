@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luminary Coffee — Premium Roastery</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVIGATION BAR
+       Concepts: position sticky, flexbox, z-index,
+       transition, class selectors, pseudo-classes
+  ══════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">☕</span>
+      <span class="logo-text">Luminary</span>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#origins">Origins</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#process">Process</a></li>
+      <li><a href="#gallery">Varieties</a></li>
+      <li><a href="#contact">Visit Us</a></li>
+    </ul>
+    <a href="#contact" class="nav-cta">Reserve a Table</a>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <ul>
+      <li><a href="#origins" class="mobile-link">Origins</a></li>
+      <li><a href="#menu" class="mobile-link">Menu</a></li>
+      <li><a href="#process" class="mobile-link">Process</a></li>
+      <li><a href="#gallery" class="mobile-link">Varieties</a></li>
+      <li><a href="#contact" class="mobile-link">Visit Us</a></li>
+    </ul>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+       Concepts: CSS variables, linear-gradient,
+       clamp(), animation, @keyframes, pseudo-elements,
+       box model, flexbox
+  ══════════════════════════════════════════ -->
+  <header class="hero" id="home">
+    <div class="hero-bg-pattern"></div>
+    <div class="hero-steam">
+      <div class="steam-particle s1"></div>
+      <div class="steam-particle s2"></div>
+      <div class="steam-particle s3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Est. 2009 · Single Origin Roastery</p>
+      <h1 class="hero-title">
+        The Art of the<br />
+        <em>Perfect Cup</em>
+      </h1>
+      <p class="hero-sub">
+        We travel the world's coffee belts sourcing extraordinary beans,
+        roasting them at our Nairobi studio to unlock flavours most people
+        never know exist.
+      </p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn btn-primary">Explore Our Menu</a>
+        <a href="#origins" class="btn btn-ghost">Our Story →</a>
+      </div>
+    </div>
+    <div class="hero-badge">
+      <div class="badge-ring">
+        <span>Award Winning · 2024</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       STATS BAR
+       Concepts: CSS Grid, calc(), rem units,
+       border, box-shadow
+  ══════════════════════════════════════════ -->
+  <section class="stats-bar">
+    <div class="stat" data-number="18">
+      <span class="stat-number">18</span>
+      <span class="stat-label">Countries Sourced</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-number">340<small>kg</small></span>
+      <span class="stat-label">Roasted Weekly</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-number">97<small>%</small></span>
+      <span class="stat-label">Customer Satisfaction</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-number">14</span>
+      <span class="stat-label">Years of Craft</span>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ORIGINS SECTION
+       Concepts: CSS Grid, two-column layout,
+       attribute selectors, transform, overflow hidden
+  ══════════════════════════════════════════ -->
+  <section class="origins" id="origins">
+    <div class="section-container">
+      <div class="origins-text">
+        <span class="section-tag">Our Philosophy</span>
+        <h2 class="section-title">Coffee is a<br /><em>journey, not a product</em></h2>
+        <p class="body-text">
+          Every bag we roast begins as a relationship — with a farmer, a climate,
+          an altitude. We visit our partner farms personally, ensuring fair pay and
+          sustainable practices before a single bean reaches our roaster.
+        </p>
+        <p class="body-text">
+          Our roasting profiles are developed over months of cupping sessions.
+          We never rush flavour. The result? Coffees that taste like somewhere real.
+        </p>
+        <div class="origins-facts">
+          <div class="fact-item">
+            <span class="fact-icon">🌍</span>
+            <div>
+              <strong>Direct Trade</strong>
+              <p>We pay 40% above market price directly to farmers.</p>
+            </div>
+          </div>
+          <div class="fact-item">
+            <span class="fact-icon">🌱</span>
+            <div>
+              <strong>Shade Grown</strong>
+              <p>All partners maintain forest canopy for quality & biodiversity.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="origins-visual">
+        <div class="visual-card main-card">
+          <div class="visual-img img-farm">
+            <div class="img-label">Yirgacheffe, Ethiopia · 2,100m</div>
+          </div>
+        </div>
+        <div class="visual-card secondary-card">
+          <div class="visual-img img-roast">
+            <div class="img-label">Our Nairobi Roastery</div>
+          </div>
+        </div>
+        <div class="floating-tag">
+          <span>🏆</span>
+          <span>Cup of Excellence<br /><small>Top 5 · Kenya 2024</small></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       MENU SECTION
+       Concepts: CSS Grid (auto-fit), :nth-child,
+       var(), hover transitions, box-shadow,
+       border-radius, pseudo-elements ::before/::after
+  ══════════════════════════════════════════ -->
+  <section class="menu-section" id="menu">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag light">The Menu</span>
+        <h2 class="section-title light">Crafted with<br /><em>intention</em></h2>
+        <p class="section-desc">Every drink is prepared to order. No short cuts, no syrups.</p>
+      </div>
+
+      <div class="menu-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="espresso">Espresso</button>
+        <button class="filter-btn" data-filter="filter">Filter</button>
+        <button class="filter-btn" data-filter="cold">Cold Brew</button>
+      </div>
+
+      <div class="menu-grid">
+
+        <article class="menu-card" data-category="espresso">
+          <div class="card-accent accent-1"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="drink-icon">☕</span>
+              <span class="card-badge">Signature</span>
+            </div>
+            <h3 class="card-title">Cortado Oscuro</h3>
+            <p class="card-desc">Equal parts espresso and steamed milk. Notes of dark chocolate, toasted walnut, and a lingering sweetness.</p>
+            <div class="card-meta">
+              <span class="card-origin">🇪🇹 Ethiopia Blend</span>
+              <span class="card-roast roast-dark">Dark Roast</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">KSh 480</span>
+            <button class="add-btn">+ Add</button>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="filter">
+          <div class="card-accent accent-2"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="drink-icon">🫖</span>
+              <span class="card-badge new">New</span>
+            </div>
+            <h3 class="card-title">Yirgacheffe Pour Over</h3>
+            <p class="card-desc">Bright and floral. Bergamot, jasmine, and a clean citrus finish that evolves as it cools.</p>
+            <div class="card-meta">
+              <span class="card-origin">🇪🇹 Single Origin</span>
+              <span class="card-roast roast-light">Light Roast</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">KSh 620</span>
+            <button class="add-btn">+ Add</button>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="cold">
+          <div class="card-accent accent-3"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="drink-icon">🧊</span>
+              <span class="card-badge">Popular</span>
+            </div>
+            <h3 class="card-title">Cold Brew Tonic</h3>
+            <p class="card-desc">18-hour cold steeped concentrate over ice, topped with tonic water. Refreshingly bitter, lightly effervescent.</p>
+            <div class="card-meta">
+              <span class="card-origin">🇰🇪 Kenya AA</span>
+              <span class="card-roast roast-medium">Medium Roast</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">KSh 550</span>
+            <button class="add-btn">+ Add</button>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="espresso">
+          <div class="card-accent accent-4"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="drink-icon">☕</span>
+            </div>
+            <h3 class="card-title">Flat White</h3>
+            <p class="card-desc">Ristretto shots with velvety microfoam. A smaller, more concentrated take on the classic latte.</p>
+            <div class="card-meta">
+              <span class="card-origin">🇨🇴 Colombia Huila</span>
+              <span class="card-roast roast-medium">Medium Roast</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">KSh 420</span>
+            <button class="add-btn">+ Add</button>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="filter">
+          <div class="card-accent accent-5"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="drink-icon">🫗</span>
+              <span class="card-badge">Seasonal</span>
+            </div>
+            <h3 class="card-title">Aeropress Reserve</h3>
+            <p class="card-desc">Seasonal single-origin, brewed to order using pressure. Thick, syrupy body with incredible clarity.</p>
+            <div class="card-meta">
+              <span class="card-origin">🇬🇹 Guatemala Antigua</span>
+              <span class="card-roast roast-medium">Medium Roast</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">KSh 580</span>
+            <button class="add-btn">+ Add</button>
+          </div>
+        </article>
+
+        <article class="menu-card" data-category="cold">
+          <div class="card-accent accent-6"></div>
+          <div class="card-body">
+            <div class="card-top">
+              <span class="drink-icon">🍵</span>
+            </div>
+            <h3 class="card-title">Nitro Cold Brew</h3>
+            <p class="card-desc">Nitrogen-charged cold brew on tap. Silky smooth with a cascading pour and naturally sweet finish.</p>
+            <div class="card-meta">
+              <span class="card-origin">🇧🇷 Brazil Natural</span>
+              <span class="card-roast roast-dark">Dark Roast</span>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="card-price">KSh 600</span>
+            <button class="add-btn">+ Add</button>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ROASTING PROCESS
+       Concepts: CSS counter, nth-child,
+       calc(), CSS Grid, position relative/absolute,
+       border-radius, background gradients
+  ══════════════════════════════════════════ -->
+  <section class="process-section" id="process">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag">Behind the Cup</span>
+        <h2 class="section-title">How we roast</h2>
+      </div>
+      <div class="process-steps">
+
+        <div class="step">
+          <div class="step-number">01</div>
+          <div class="step-content">
+            <h3>Green Bean Intake</h3>
+            <p>Raw green beans arrive and are weighed, moisture-tested, and cupped before acceptance. We reject up to 30% of lots that don't meet our benchmarks.</p>
+          </div>
+          <div class="step-line"></div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">02</div>
+          <div class="step-content">
+            <h3>Profile Development</h3>
+            <p>Our roastmaster develops a custom temperature curve for each origin — adjusting charge temperature, drum speed, and airflow to highlight the bean's best qualities.</p>
+          </div>
+          <div class="step-line"></div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">03</div>
+          <div class="step-content">
+            <h3>The Roast</h3>
+            <p>Beans are roasted in small batches (max 12kg) on our Probat drum roaster. We listen for the first crack, watching temperature curves in real time on our logging software.</p>
+          </div>
+          <div class="step-line"></div>
+        </div>
+
+        <div class="step">
+          <div class="step-number">04</div>
+          <div class="step-content">
+            <h3>Rest & Cupping</h3>
+            <p>Freshly roasted beans rest for 48–72 hours to de-gas. Then a blind cupping is held. Only approved batches are bagged and sold — the rest are re-roasted or donated.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FLAVOUR VARIETIES / GALLERY
+       Concepts: CSS Grid, radial-gradient, hsl(),
+       :hover transform, overflow, object-fit concept
+  ══════════════════════════════════════════ -->
+  <section class="gallery-section" id="gallery">
+    <div class="section-container">
+      <div class="section-header">
+        <span class="section-tag light">Flavour Profiles</span>
+        <h2 class="section-title light">Find your<br /><em>perfect match</em></h2>
+      </div>
+      <div class="flavour-grid">
+
+        <div class="flavour-card" style="--accent: hsl(25, 80%, 45%);">
+          <div class="flavour-icon">🍫</div>
+          <h3>Chocolate & Nuts</h3>
+          <p>Rich, warming, and familiar. These coffees ground you — perfect for mornings or after-dinner sipping.</p>
+          <div class="flavour-tags">
+            <span>Dark Chocolate</span>
+            <span>Hazelnut</span>
+            <span>Almond</span>
+          </div>
+          <div class="flavour-bar">
+            <div class="bar-fill" style="width: 85%;"></div>
+          </div>
+          <small>Intensity: High</small>
+        </div>
+
+        <div class="flavour-card" style="--accent: hsl(40, 90%, 50%);">
+          <div class="flavour-icon">🍊</div>
+          <h3>Citrus & Bright</h3>
+          <p>Lively acidity and vibrant fruit notes. These coffees wake you up and make you curious for the next sip.</p>
+          <div class="flavour-tags">
+            <span>Orange Zest</span>
+            <span>Bergamot</span>
+            <span>Lemon</span>
+          </div>
+          <div class="flavour-bar">
+            <div class="bar-fill" style="width: 55%;"></div>
+          </div>
+          <small>Intensity: Medium</small>
+        </div>
+
+        <div class="flavour-card" style="--accent: hsl(140, 60%, 35%);">
+          <div class="flavour-icon">🌸</div>
+          <h3>Floral & Delicate</h3>
+          <p>Subtle, tea-like, and aromatic. Best enjoyed without milk. Let the flavour evolve as the cup cools.</p>
+          <div class="flavour-tags">
+            <span>Jasmine</span>
+            <span>Rose Water</span>
+            <span>Chamomile</span>
+          </div>
+          <div class="flavour-bar">
+            <div class="bar-fill" style="width: 35%;"></div>
+          </div>
+          <small>Intensity: Light</small>
+        </div>
+
+        <div class="flavour-card" style="--accent: hsl(350, 70%, 45%);">
+          <div class="flavour-icon">🍓</div>
+          <h3>Fruity & Wine-Like</h3>
+          <p>Juicy, complex, and slightly fermented. Natural-process coffees that border on dessert in a cup.</p>
+          <div class="flavour-tags">
+            <span>Blueberry</span>
+            <span>Red Wine</span>
+            <span>Strawberry</span>
+          </div>
+          <div class="flavour-bar">
+            <div class="bar-fill" style="width: 70%;"></div>
+          </div>
+          <small>Intensity: Medium-High</small>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CSS CONCEPTS REFERENCE STRIP
+       Concepts: display types showcase, explicit labels
+  ══════════════════════════════════════════ -->
+  <section class="concepts-strip">
+    <div class="section-container">
+      <span class="section-tag">CSS Concepts Used on This Page</span>
+      <div class="concept-tags">
+        <span class="ctag">CSS Variables</span>
+        <span class="ctag">Flexbox</span>
+        <span class="ctag">CSS Grid</span>
+        <span class="ctag">Box Model</span>
+        <span class="ctag">position: sticky</span>
+        <span class="ctag">@keyframes</span>
+        <span class="ctag">transition</span>
+        <span class="ctag">transform</span>
+        <span class="ctag">clamp()</span>
+        <span class="ctag">calc()</span>
+        <span class="ctag">var()</span>
+        <span class="ctag">hsl()</span>
+        <span class="ctag">rgba()</span>
+        <span class="ctag">linear-gradient()</span>
+        <span class="ctag">radial-gradient()</span>
+        <span class="ctag">:hover</span>
+        <span class="ctag">:nth-child()</span>
+        <span class="ctag">::before / ::after</span>
+        <span class="ctag">Media Queries</span>
+        <span class="ctag">Attribute Selectors</span>
+        <span class="ctag">border-radius</span>
+        <span class="ctag">box-shadow</span>
+        <span class="ctag">overflow: hidden</span>
+        <span class="ctag">z-index</span>
+        <span class="ctag">rem / em / vw</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT / VISIT SECTION
+       Concepts: CSS Grid 2-col, form styling,
+       focus pseudo-class, input[type] attribute selector
+  ══════════════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="section-container">
+      <div class="contact-grid">
+
+        <div class="contact-info">
+          <span class="section-tag">Find Us</span>
+          <h2 class="section-title">Come visit<br />the roastery</h2>
+          <div class="contact-details">
+            <div class="detail-row">
+              <span class="detail-icon">📍</span>
+              <div>
+                <strong>Address</strong>
+                <p>14 Westlands Road, Nairobi<br />Ground Floor, The Mill Building</p>
+              </div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon">🕐</span>
+              <div>
+                <strong>Hours</strong>
+                <p>Mon–Fri: 7am – 7pm<br />Sat–Sun: 8am – 5pm</p>
+              </div>
+            </div>
+            <div class="detail-row">
+              <span class="detail-icon">📞</span>
+              <div>
+                <strong>Phone</strong>
+                <p>+254 700 123 456</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap">
+          <h3 class="form-title">Make a reservation</h3>
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="fname" placeholder="Amara" required />
+              </div>
+              <div class="form-group">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lname" placeholder="Osei" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="amara@example.com" required />
+            </div>
+            <div class="form-group">
+              <label for="date">Preferred Date</label>
+              <input type="date" id="date" name="date" />
+            </div>
+            <div class="form-group">
+              <label for="guests">Party Size</label>
+              <select id="guests" name="guests">
+                <option value="">Select guests</option>
+                <option value="1">1 person</option>
+                <option value="2">2 people</option>
+                <option value="3-5">3–5 people</option>
+                <option value="6+">6+ people</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Notes or requests</label>
+              <textarea id="message" name="message" rows="3" placeholder="Any dietary notes, special occasions..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary full-width">Book My Table</button>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+       Concepts: Grid, border-top, opacity,
+       :hover on links, text-decoration
+  ══════════════════════════════════════════ -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <span class="logo-icon">☕</span>
+        <span class="logo-text">Luminary</span>
+        <p>Single origin. Transparently sourced.<br />Nairobi roasted.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#menu">Menu</a></li>
+          <li><a href="#origins">Our Story</a></li>
+          <li><a href="#process">Roasting</a></li>
+          <li><a href="#contact">Find Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#">Whole Beans</a></li>
+          <li><a href="#">Subscriptions</a></li>
+          <li><a href="#">Brewing Gear</a></li>
+          <li><a href="#">Gift Cards</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="#">Instagram</a></li>
+          <li><a href="#">Twitter / X</a></li>
+          <li><a href="#">Newsletter</a></li>
+          <li><a href="#">Press Kit</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2024 Luminary Coffee Roasters. All rights reserved.</p>
+      <p>Designed to demonstrate CSS Core Concepts — freeCodeCamp Responsive Web Design</p>
+    </div>
+  </footer>
+
+  <!-- Success Toast -->
+  <div class="toast" id="toast">
+    <span>✅</span> Reservation request sent! We'll confirm within 2 hours.
+  </div>
+
+  <script>
+    // Sticky nav scroll effect
+    window.addEventListener('scroll', () => {
+      const nav = document.getElementById('navbar');
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      mobileMenu.classList.toggle('open');
+    });
+    document.querySelectorAll('.mobile-link').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+      });
+    });
+
+    // Form submission
+    function handleSubmit(e) {
+      e.preventDefault();
+      const toast = document.getElementById('toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 4000);
+      e.target.reset();
+    }
+
+    // Intersection observer for fade-in animations
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.menu-card, .step, .flavour-card, .stat').forEach(el => {
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
